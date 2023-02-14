@@ -17,7 +17,7 @@ export const useCustomizeThemeStore = defineStore({
   id: "customizeTheme",
   state: (): State => ({
     miniSidebar: false,
-    darkTheme: false,
+    darkTheme: true,
     primaryColor: {
       colorId: 2,
       colorName: "grey",

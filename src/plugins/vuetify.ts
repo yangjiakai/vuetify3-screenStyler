@@ -30,7 +30,7 @@ const Darktheme: ThemeDefinition = {
     secondary: "#219BE8",
     // surface:toolbar/navigation-drawer/background,
     surface: "#202225",
-    title: "#e7e3FC",
+    title: "#fff",
     content: "#E7E3FC",
     accent: "#6386e1",
     error: "#e47171",
