@@ -5,7 +5,7 @@
 -->
 <script setup lang="ts">
 // 返回可用图标集的列表。
-import { listCollcetionsApi, getCollcetionIconsApi } from "@/api/iconifyApi";
+import { getCollcetionIconsApi } from "@/api/iconifyApi";
 import { Icon } from "@iconify/vue";
 import { useStylerStore } from "@/stores/stylerStore";
 const stylerStore = useStylerStore();
@@ -15,11 +15,9 @@ const prefix = ref("skill-icons");
 
 const getIcons = async () => {
   const res = await getCollcetionIconsApi(prefix.value);
-  icons.value = res.data.uncategorized.slice(0, 10);
+  stylerStore.dockItems = res.data.uncategorized.slice(0, 10);
   console.log(icons.value);
 };
-
-const bottom = ref("400px");
 
 const backgroundColor = computed(
   () =>
@@ -28,7 +26,6 @@ const backgroundColor = computed(
 
 const distance = computed(() => stylerStore.dock.distance + "px");
 
-const bgC = ref("#ccc");
 getIcons();
 </script>
 
@@ -39,7 +36,7 @@ getIcons();
     :class="stylerStore.dock.position"
   >
     <Icon
-      v-for="icon in icons"
+      v-for="icon in stylerStore.dockItems"
       :icon="prefix + ':' + icon"
       :width="stylerStore.dock.size"
       class="ma-2"

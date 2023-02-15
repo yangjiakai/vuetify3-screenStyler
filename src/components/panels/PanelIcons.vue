@@ -4,6 +4,7 @@
 * @Description: 
 -->
 <script setup lang="ts">
+import WebIcons from "@/components/icon/WebIcons.vue";
 const panel = ref([0, 1]);
 </script>
 
@@ -14,8 +15,8 @@ const panel = ref([0, 1]);
       <v-expansion-panel-text> Some content</v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
-      <v-expansion-panel-title>Web Shortcuts</v-expansion-panel-title>
-      <v-expansion-panel-text> Some content </v-expansion-panel-text>
+      <v-expansion-panel-title>Web Icons</v-expansion-panel-title>
+      <v-expansion-panel-text> <WebIcons /> </v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-title>Custom Icon</v-expansion-panel-title>

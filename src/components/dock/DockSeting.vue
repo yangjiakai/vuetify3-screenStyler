@@ -13,8 +13,6 @@ const positionList = ref([
   { name: "left", icon: "mdi-menu-left" },
   { name: "right", icon: "mdi-menu-right" },
 ]);
-const color = ref({ r: 255, g: 0, b: 255, a: 1 });
-// const size = ref(32);
 </script>
 
 <template>
@@ -30,7 +28,7 @@ const color = ref({ r: 255, g: 0, b: 255, a: 1 });
       :label="stylerStore.dock.isShow ? 'Use' : 'Close'"
       inset
     ></v-switch>
-    <v-divider class="my-5"></v-divider>
+    <v-divider class="mb-5"></v-divider>
     <!-- ---------------------------------------------- -->
     <!---Separator -->
     <!-- ---------------------------------------------- -->

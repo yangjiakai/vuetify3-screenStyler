@@ -16,6 +16,7 @@ export const useStylerStore = defineStore({
       },
       position: "bottom",
     }),
+    dockItems: ref<string[]>([]),
   }),
 
   persist: {
