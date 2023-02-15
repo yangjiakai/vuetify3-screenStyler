@@ -6,6 +6,39 @@
 <script setup lang="ts">
 import { useStylerStore } from "@/stores/stylerStore";
 const stylerStore = useStylerStore();
+
+const mainNav = ref([
+  {
+    icon: "mdi-image-outline",
+    value: "wall",
+    text: "wall",
+    panel: "wall",
+  },
+  {
+    icon: "mdi-widgets",
+    value: "widgets",
+    text: "widgets",
+    panel: "widgets",
+  },
+  {
+    icon: "mdi-star-outline",
+    value: "icons",
+    text: "icons",
+    panel: "icons",
+  },
+  {
+    icon: "mdi-laptop",
+    value: "dock",
+    text: "dock",
+    panel: "dock",
+  },
+  {
+    icon: "mdi-cog-outline",
+    value: "options",
+    text: "options",
+    panel: "options",
+  },
+]);
 </script>
 
 <template>
@@ -30,55 +63,22 @@ const stylerStore = useStylerStore();
       </v-card>
     </template>
     <!-- ---------------------------------------------- -->
-    <!---Nav -->
+    <!---Main Nav -->
     <!-- ---------------------------------------------- -->
     <v-list>
       <v-list-item
-        prepend-icon="mdi-image-outline"
-        value="wall"
-        @click="stylerStore.currentPanel = 'wall'"
+        v-for="item in mainNav"
+        :active="item.value === stylerStore.currentPanel"
+        :key="item.value"
+        :prepend-icon="item.icon"
+        :value="item.value"
+        @click="stylerStore.currentPanel = item.panel"
       >
         <v-tooltip
           activator="parent"
           location="right"
           class=""
-          text="wall"
-        ></v-tooltip>
-      </v-list-item>
-      <v-list-item
-        prepend-icon="mdi-widgets"
-        value="widgets"
-        @click="stylerStore.currentPanel = 'widgets'"
-      >
-        <v-tooltip
-          activator="parent"
-          location="right"
-          text="widgets"
-        ></v-tooltip>
-      </v-list-item>
-      <v-list-item
-        prepend-icon="mdi-star-outline"
-        value="icons"
-        @click="stylerStore.currentPanel = 'icons'"
-      >
-        <v-tooltip activator="parent" location="right" text="icons"></v-tooltip>
-      </v-list-item>
-      <v-list-item
-        prepend-icon="mdi-laptop"
-        value="dock"
-        @click="stylerStore.currentPanel = 'dock'"
-      >
-        <v-tooltip activator="parent" location="right" text="dock"></v-tooltip>
-      </v-list-item>
-      <v-list-item
-        prepend-icon="mdi-cog-outline"
-        value="options"
-        @click="stylerStore.currentPanel = 'options'"
-      >
-        <v-tooltip
-          activator="parent"
-          location="right"
-          text="options"
+          :text="item.text"
         ></v-tooltip>
       </v-list-item>
     </v-list>
