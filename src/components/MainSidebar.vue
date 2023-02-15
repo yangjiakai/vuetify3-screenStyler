@@ -42,7 +42,7 @@ const mainNav = ref([
 </script>
 
 <template>
-  <v-navigation-drawer theme="dark" color="#171717" rail>
+  <v-navigation-drawer color="#171717" rail>
     <!-- ---------------------------------------------- -->
     <!---Top Area -->
     <!-- ---------------------------------------------- -->

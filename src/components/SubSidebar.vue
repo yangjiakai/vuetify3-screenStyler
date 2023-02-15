@@ -34,7 +34,7 @@ const icon = computed(() => {
   <v-navigation-drawer
     class="sub-sidebar text-white"
     v-model="customizeTheme.subSidebar"
-    width="300"
+    width="340"
     color="rgba(40,40,40,.5)"
   >
     <!-- ---------------------------------------------- -->
