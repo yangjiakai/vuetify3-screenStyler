@@ -32,7 +32,13 @@ const positionList = ref([
     <!-- ---------------------------------------------- -->
     <!---Separator -->
     <!-- ---------------------------------------------- -->
-    <v-btn color="grey" class="my-5" block>Add Separator</v-btn>
+    <v-btn
+      color="grey"
+      class="my-5"
+      block
+      @click="stylerStore.dockItems.push('divider')"
+      >Add Separator</v-btn
+    >
     <v-divider class="my-5"></v-divider>
     <!-- ---------------------------------------------- -->
     <!---Dock Positon -->

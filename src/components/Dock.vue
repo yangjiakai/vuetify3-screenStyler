@@ -25,7 +25,11 @@ const backgroundColor = computed(
 );
 
 const distance = computed(() => stylerStore.dock.distance + "px");
-
+const isVertical = computed(
+  () =>
+    stylerStore.dock.position === "top" ||
+    stylerStore.dock.position === "bottom"
+);
 getIcons();
 </script>
 
@@ -35,12 +39,27 @@ getIcons();
     class="dock"
     :class="stylerStore.dock.position"
   >
-    <Icon
+    <template v-for="icon in stylerStore.dockItems" :key="icon">
+      <v-divider
+        :class="isVertical ? 'mx-3' : 'my-3'"
+        v-if="icon === 'divider'"
+        :vertical="isVertical"
+        color="red"
+        width="100%"
+      ></v-divider>
+      <Icon
+        v-else
+        :icon="prefix + ':' + icon"
+        :width="stylerStore.dock.size"
+        class="ma-2"
+      />
+    </template>
+    <!-- <Icon
       v-for="icon in stylerStore.dockItems"
       :icon="prefix + ':' + icon"
       :width="stylerStore.dock.size"
       class="ma-2"
-    />
+    /> -->
   </div>
 </template>
 
