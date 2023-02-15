@@ -3,7 +3,10 @@
 * @Maintainer: J.K. Yang
 * @Description: 
 -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useStylerStore } from "@/stores/stylerStore";
+const stylerStore = useStylerStore();
+</script>
 
 <template>
   <v-navigation-drawer theme="dark" color="#171717" rail>
@@ -30,7 +33,11 @@
     <!---Nav -->
     <!-- ---------------------------------------------- -->
     <v-list>
-      <v-list-item prepend-icon="mdi-image-outline" value="wall" to="/">
+      <v-list-item
+        prepend-icon="mdi-image-outline"
+        value="wall"
+        @click="stylerStore.currentPanel = 'wall'"
+      >
         <v-tooltip
           activator="parent"
           location="right"
@@ -38,24 +45,40 @@
           text="wall"
         ></v-tooltip>
       </v-list-item>
-      <v-list-item prepend-icon="mdi-widgets" value="widgets" to="/">
+      <v-list-item
+        prepend-icon="mdi-widgets"
+        value="widgets"
+        @click="stylerStore.currentPanel = 'widgets'"
+      >
         <v-tooltip
           activator="parent"
           location="right"
           text="widgets"
         ></v-tooltip>
       </v-list-item>
-      <v-list-item prepend-icon="mdi-star-outline" value="icons" to="/">
+      <v-list-item
+        prepend-icon="mdi-star-outline"
+        value="icons"
+        @click="stylerStore.currentPanel = 'icons'"
+      >
         <v-tooltip activator="parent" location="right" text="icons"></v-tooltip>
       </v-list-item>
-      <v-list-item prepend-icon="mdi-laptop" value="dock" to="/">
+      <v-list-item
+        prepend-icon="mdi-laptop"
+        value="dock"
+        @click="stylerStore.currentPanel = 'dock'"
+      >
         <v-tooltip activator="parent" location="right" text="dock"></v-tooltip>
       </v-list-item>
-      <v-list-item prepend-icon="mdi-cog-outline" value="config" to="/">
+      <v-list-item
+        prepend-icon="mdi-cog-outline"
+        value="options"
+        @click="stylerStore.currentPanel = 'options'"
+      >
         <v-tooltip
           activator="parent"
           location="right"
-          text="config"
+          text="options"
         ></v-tooltip>
       </v-list-item>
     </v-list>
