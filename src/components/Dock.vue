@@ -19,8 +19,6 @@ const getIcons = async () => {
   console.log(icons.value);
 };
 
-const bgColor = ref("#000000");
-const alpah = ref(1.0);
 const bottom = ref("400px");
 
 const backgroundColor = computed(
@@ -28,17 +26,23 @@ const backgroundColor = computed(
     `rgba(${stylerStore.dock.backgroudColor.r}, ${stylerStore.dock.backgroudColor.g}, ${stylerStore.dock.backgroudColor.b}, ${stylerStore.dock.backgroudColor.a})`
 );
 
+const distance = computed(() => stylerStore.dock.distance + "px");
+
 const bgC = ref("#ccc");
 getIcons();
 </script>
 
 <template>
-  <div v-if="stylerStore.dock.isShow" class="dock">
+  <div
+    v-if="stylerStore.dock.isShow"
+    class="dock"
+    :class="stylerStore.dock.position"
+  >
     <Icon
       v-for="icon in icons"
       :icon="prefix + ':' + icon"
       :width="stylerStore.dock.size"
-      class="mr-3"
+      class="ma-2"
     />
   </div>
 </template>
@@ -46,10 +50,36 @@ getIcons();
 <style scoped lang="scss">
 .dock {
   position: fixed;
-  padding: 10px;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
-  bottom: 200px;
-  right: v-bind(bottom);
+  transform: translateX(-50%);
   background-color: v-bind(backgroundColor);
+}
+
+.top {
+  top: v-bind(distance);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom {
+  left: 50%;
+  bottom: v-bind(distance);
+  transform: translateX(-50%);
+}
+
+.left {
+  left: v-bind(distance);
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+}
+
+.right {
+  top: 50%;
+  right: v-bind(distance);
+  transform: translateY(-50%);
+  flex-direction: column;
 }
 </style>

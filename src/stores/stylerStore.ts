@@ -7,13 +7,14 @@ export const useStylerStore = defineStore({
     dock: reactive({
       isShow: true,
       size: 100,
+      distance: 100,
       backgroudColor: {
         r: 0,
         g: 0,
         b: 0,
         a: 1,
       },
-      position: 1,
+      position: "bottom",
     }),
   }),
 
