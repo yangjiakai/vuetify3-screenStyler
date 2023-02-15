@@ -9,7 +9,7 @@
 <br>
 
 <p align='center'>
-<b>English</b> | <a href="https://github.com/yangjiakai/vuetify3-base/blob/master/README.zh-CN.md">简体中文</a>| <a href="https://github.com/yangjiakai/vuetify3-base/blob/master/README.jp.md">日本語</a>
+<b>English</b> | <a href="https://github.com/yangjiakai/vuetify3-screenStyler/blob/master/README.zh-CN.md">简体中文</a>| <a href="https://github.com/yangjiakai/vuetify3-screenStyler/blob/master/README.jp.md">日本語</a>
 </p>
 
 ## Introduction
@@ -38,9 +38,9 @@ This tool is designed to mimic Window's Screen Styler, but its application in a 
 ## Try it now!
 
 ```
-https://github.com/yangjiakai/vuetify3-base.git
+https://github.com/yangjiakai/vuetify3-screenStyler.git
 
-cd vuetify3-base
+cd vuetify3-screenStyler
 
 npm install
 
