@@ -1,9 +1,9 @@
 <p align='center' style="margin-top:80px">
-  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='50'/>
+  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
 </p>
 
 <h6 align='center'>
-<a href="https://marvelous-sunflower-cb8d70.netlify.app/">Live Demo</a>
+<a href="https://cool-daifuku-5ec982.netlify.app/">Live Demo</a>
 </h6>
 
 <br>
@@ -14,7 +14,7 @@
 
 ## Introduction
 
-This is a development template that integrates frequently used features and plugins using vuetify3 + composite APIs. Future vuetify3 apps can be developed based on this template.
+This tool is designed to mimic Window's Screen Styler, but its application in a browser context is uncertain. It can be used as a super customization tool for aesthetic purposes.
 
 ## Features
 

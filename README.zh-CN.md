@@ -1,9 +1,9 @@
 <p align='center' style="margin-top:80px">
-  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='50'/>
+  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
 </p>
 
 <h6 align='center'>
-<a href="https://marvelous-sunflower-cb8d70.netlify.app/">在线 Demo</a>
+<a href="https://cool-daifuku-5ec982.netlify.app/">在线 Demo</a>
 </h6>
 
 <br>
@@ -14,7 +14,7 @@
 
 ## 序文
 
-这是一个使用 vuetify3 + 组合式 api,整合了常用功能和插件的开发模板,之后的 vuetify3 app 都可以基于这个模板进行开发
+模仿 Window 的 Screen Styler 制作的工具,用在浏览器上不知道有什么用,可以当做系统的超级美化自定义工具吧
 
 ## 特性
 

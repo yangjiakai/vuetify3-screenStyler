@@ -1,9 +1,9 @@
 <p align='center' style="margin-top:80px">
-  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='50'/>
+  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
 </p>
 
 <h6 align='center'>
-<a href="https://marvelous-sunflower-cb8d70.netlify.app/">ライブ・デモ</a>
+<a href="https://cool-daifuku-5ec982.netlify.app/">ライブ・デモ</a>
 </h6>
 
 <br>
@@ -14,7 +14,7 @@
 
 ## 序文
 
-これは、vuetify3 + composition api を使用して、一般的な機能やプラグインを統合した開発テンプレートです。このテンプレートを基に、今後の vuetify3 アプリの開発ができます。
+このツールは Windows の Screen Styler を模倣して作られたものであり、ブラウザのコンテキストでの適用は不確かです。美的な目的のための超カスタマイズツールとして使用できます。
 
 ## 特徴
 
