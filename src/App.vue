@@ -11,4 +11,9 @@ const customizeTheme = useCustomizeThemeStore();
   </v-app>
 </template>
 
-<style scoped></style>
+<style scoped>
+#app {
+  background: url("https://w.wallhaven.cc/full/yx/wallhaven-yxxvox.png");
+  background-size: cover;
+}
+</style>
