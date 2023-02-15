@@ -10,23 +10,27 @@ const panel = ref([0, 1]);
 <template>
   <v-expansion-panels v-model="panel" class="mt-5" multiple>
     <v-expansion-panel>
-      <v-expansion-panel-title>Solid Color</v-expansion-panel-title>
+      <v-expansion-panel-title>Startup</v-expansion-panel-title>
       <v-expansion-panel-text> Some content</v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
-      <v-expansion-panel-title>Gradient</v-expansion-panel-title>
+      <v-expansion-panel-title>Gemeral</v-expansion-panel-title>
       <v-expansion-panel-text> Some content </v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
-      <v-expansion-panel-title>Wallpapers</v-expansion-panel-title>
+      <v-expansion-panel-title>Specific Optins</v-expansion-panel-title>
       <v-expansion-panel-text> Some content </v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
-      <v-expansion-panel-title>Custom</v-expansion-panel-title>
+      <v-expansion-panel-title>Performance</v-expansion-panel-title>
       <v-expansion-panel-text> Some content </v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
-      <v-expansion-panel-title>Layered</v-expansion-panel-title>
+      <v-expansion-panel-title>Metada</v-expansion-panel-title>
+      <v-expansion-panel-text> Some content </v-expansion-panel-text>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-title>Misc</v-expansion-panel-title>
       <v-expansion-panel-text> Some content </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>

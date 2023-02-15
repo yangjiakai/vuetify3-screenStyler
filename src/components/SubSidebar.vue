@@ -6,7 +6,11 @@
 <script setup lang="ts">
 import { useCustomizeThemeStore } from "@/stores/customizeTheme";
 import { useLocale } from "vuetify";
-import PanelWall from "@/components/panels/panelWall.vue";
+import PanelWall from "@/components/panels/PanelWall.vue";
+import PanelDock from "@/components/panels/PanelDock.vue";
+import PanelOptions from "@/components/panels/PanelOptions.vue";
+import PanelIcons from "@/components/panels/PanelIcons.vue";
+import PanelWidgets from "@/components/panels/PanelWidgets.vue";
 import { useStylerStore } from "@/stores/stylerStore";
 const stylerStore = useStylerStore();
 const customizeTheme = useCustomizeThemeStore();
@@ -59,18 +63,20 @@ const icon = computed(() => {
         <!-- ---------------------------------------------- -->
         <!---Widgets Panel -->
         <!-- ---------------------------------------------- -->
-
+        <PanelWidgets v-else-if="stylerStore.currentPanel === 'widgets'" />
         <!-- ---------------------------------------------- -->
         <!---Icons Panel -->
         <!-- ---------------------------------------------- -->
-
+        <PanelIcons v-else-if="stylerStore.currentPanel === 'icons'" />
         <!-- ---------------------------------------------- -->
         <!---Dock Panel -->
         <!-- ---------------------------------------------- -->
+        <PanelDock v-else-if="stylerStore.currentPanel === 'dock'" />
 
         <!-- ---------------------------------------------- -->
         <!---Options Panel -->
         <!-- ---------------------------------------------- -->
+        <PanelOptions v-else-if="stylerStore.currentPanel === 'options'" />
       </perfect-scrollbar>
     </div>
   </v-navigation-drawer>
