@@ -10,6 +10,7 @@ import SubSidebar from "@/components/SubSidebar.vue";
 import AppBar from "@/components/AppBar.vue";
 import CustomizationMenu from "@/components/CustomizationMenu.vue";
 import Dock from "@/components/Dock.vue";
+import WallCard from "@/components/WallCard.vue";
 </script>
 
 <template>
@@ -39,6 +40,10 @@ import Dock from "@/components/Dock.vue";
   <!---Dock -->
   <!-- ---------------------------------------------- -->
   <Dock />
+  <!-- ---------------------------------------------- -->
+  <!---WallCard -->
+  <!-- ---------------------------------------------- -->
+  <WallCard />
 </template>
 
 <style scoped lang="scss">
