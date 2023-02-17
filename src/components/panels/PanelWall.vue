@@ -24,6 +24,7 @@ console.log(gradients);
     <!-- ---------------------------------------------- -->
     <!---GradientSetting -->
     <!-- ---------------------------------------------- -->
+
     <v-expansion-panel>
       <v-expansion-panel-title>Gradient</v-expansion-panel-title>
       <v-expansion-panel-text>
