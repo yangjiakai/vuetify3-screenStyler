@@ -7,6 +7,8 @@
 import { gradients } from "@/data/gradients";
 import ColorSetting from "@/components/wall/ColorSetting.vue";
 import GradientSetting from "@/components/wall/GradientSetting.vue";
+import UnsplshWalPaperSetting from "@/components/wall/UnsplshWalPaperSetting.vue";
+import WallpaperHeavenSetting from "@/components/wall/WallpaperHeavenSetting.vue";
 
 const panel = ref([0, 1]);
 console.log(gradients);
@@ -32,13 +34,17 @@ console.log(gradients);
       </v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
-      <v-expansion-panel-title>Wallpapers</v-expansion-panel-title>
-      <v-expansion-panel-text> Some content </v-expansion-panel-text>
+      <v-expansion-panel-title>Unsplash Wallpapers</v-expansion-panel-title>
+      <v-expansion-panel-text>
+        <UnsplshWalPaperSetting />
+      </v-expansion-panel-text>
     </v-expansion-panel>
-    <v-expansion-panel>
-      <v-expansion-panel-title>Custom</v-expansion-panel-title>
-      <v-expansion-panel-text> Some content </v-expansion-panel-text>
-    </v-expansion-panel>
+    <!-- <v-expansion-panel>
+      <v-expansion-panel-title>WallHeaven Wallpapers</v-expansion-panel-title>
+      <v-expansion-panel-text
+        ><WallpaperHeavenSetting
+      /></v-expansion-panel-text>
+    </v-expansion-panel> -->
     <v-expansion-panel>
       <v-expansion-panel-title>Layered</v-expansion-panel-title>
       <v-expansion-panel-text> Some content </v-expansion-panel-text>

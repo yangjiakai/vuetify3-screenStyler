@@ -59,4 +59,16 @@ export default defineConfig({
     },
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
+
+  // 本地运行配置，及反向代理配置
+  server: {
+    port: 4399,
+    // proxy: {
+    //   "/api": {
+    //     target: "https://wallhaven.cc/api/v1",
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, ""),
+    //   },
+    // },
+  },
 });
