@@ -5,6 +5,7 @@
 -->
 <script setup lang="ts">
 import WebIcons from "@/components/icon/WebIcons.vue";
+import SvgLogos from "@/components/icon/SvgLogos.vue";
 const panel = ref([0, 1]);
 </script>
 
@@ -12,11 +13,11 @@ const panel = ref([0, 1]);
   <v-expansion-panels v-model="panel" class="mt-5" multiple>
     <v-expansion-panel>
       <v-expansion-panel-title>App Icons</v-expansion-panel-title>
-      <v-expansion-panel-text> Some content</v-expansion-panel-text>
+      <v-expansion-panel-text><SvgLogos /></v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-title>Web Icons</v-expansion-panel-title>
-      <v-expansion-panel-text> <WebIcons /> </v-expansion-panel-text>
+      <v-expansion-panel-text><WebIcons /></v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-title>Custom Icon</v-expansion-panel-title>

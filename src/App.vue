@@ -4,7 +4,7 @@ const customizeTheme = useCustomizeThemeStore();
 </script>
 
 <template>
-  <v-app id="app" :theme="customizeTheme.darkTheme ? 'dark' : 'light'">
+  <v-app id="app" theme="dark">
     <router-view> </router-view>
     <!-- <AppBar /> -->
     <v-main> </v-main>

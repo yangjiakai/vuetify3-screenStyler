@@ -10,7 +10,7 @@ import { useStylerStore } from "@/stores/stylerStore";
 const stylerStore = useStylerStore();
 
 const icons = ref([]);
-const prefix = ref("skill-icons");
+const prefix = ref("vscode-icons");
 const getIcons = async () => {
   const res = await getCollcetionIconsApi(prefix.value);
   icons.value = res.data.uncategorized;
@@ -32,7 +32,7 @@ getIcons();
       v-for="icon in icons"
       :icon="prefix + ':' + icon"
       :width="46"
-      class="ma-2"
+      class="ma-2 bg-white rounded"
       @click="addTo(icon)"
     />
   </perfect-scrollbar>

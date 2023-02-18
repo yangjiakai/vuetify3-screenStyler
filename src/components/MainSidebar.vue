@@ -58,6 +58,7 @@ const mainNav = ref([
             activator="parent"
             location="right"
             text="widgets"
+            theme="light"
           ></v-tooltip>
         </v-list-item>
       </v-card>
@@ -79,6 +80,7 @@ const mainNav = ref([
           location="right"
           class=""
           :text="item.text"
+          theme="light"
         ></v-tooltip>
       </v-list-item>
     </v-list>
@@ -96,6 +98,7 @@ const mainNav = ref([
             activator="parent"
             location="right"
             text="save"
+            theme="light"
           ></v-tooltip>
         </v-list-item>
         <v-list-item prepend-icon="mdi-tray-arrow-down" value="download" to="/">
@@ -103,6 +106,7 @@ const mainNav = ref([
             activator="parent"
             location="right"
             text="download"
+            theme="light"
           ></v-tooltip>
         </v-list-item>
         <v-list-item prepend-icon="mdi-check-circle" value="confirm" to="/">
@@ -110,6 +114,7 @@ const mainNav = ref([
             activator="parent"
             location="right"
             text="confirm"
+            theme="light"
           ></v-tooltip>
         </v-list-item>
       </v-list>
