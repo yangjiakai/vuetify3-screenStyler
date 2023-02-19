@@ -4,6 +4,9 @@
 * @Description: 
 -->
 <script setup lang="ts">
+import { useStylerStore } from "@/stores/stylerStore";
+const stylerStore = useStylerStore();
+
 const solidColors = ref([
   "#02577A",
   "#09A4EC",
@@ -21,7 +24,9 @@ const solidColors = ref([
   "#571E48",
 ]);
 
-const changeColor = (color: string) => {};
+const changeColor = (color: string) => {
+  stylerStore.currentBackground = color;
+};
 </script>
 
 <template>

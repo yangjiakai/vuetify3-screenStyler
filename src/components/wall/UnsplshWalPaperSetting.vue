@@ -43,7 +43,7 @@ const changeBg = (gradient: string) => {};
     >
     </v-card> -->
   </perfect-scrollbar>
-  <v-btn class="mt-3" color="primary" block>More Wallpapers</v-btn>
+  <v-btn class="mt-3" color="gray" block>More Wallpapers</v-btn>
 </template>
 
 <style scoped lang="scss">

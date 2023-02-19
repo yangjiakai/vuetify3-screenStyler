@@ -4,6 +4,7 @@ export const useStylerStore = defineStore({
   id: "styler",
   state: () => ({
     currentPanel: ref("wall"),
+    currentBackground: ref(""),
     dock: reactive({
       isShow: true,
       size: 100,
