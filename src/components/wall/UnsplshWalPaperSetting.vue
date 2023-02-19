@@ -4,10 +4,12 @@
 * @Description: 
 -->
 <script setup lang="ts">
+import { useStylerStore } from "@/stores/stylerStore";
 import { getTopicPhotosApi } from "@/api/unsplashApi";
 import type { Photo } from "@/types/unsplashTypes";
 
 const wallpapers = ref<Photo[]>([]);
+const stylerStore = useStylerStore();
 const getWallpapers = async () => {
   const res = await getTopicPhotosApi("wallpapers", { per_page: 30 });
   wallpapers.value = res.data;
@@ -17,37 +19,33 @@ onMounted(() => {
   getWallpapers();
 });
 
-const changeBg = (gradient: string) => {};
+const changeBg = (photo: Photo) => {
+  currentPhoto.value = photo;
+  stylerStore.currentBackground = `url(${photo.urls.regular})`;
+};
+
+const currentPhoto = ref<Photo>();
 </script>
 
 <template>
-  <perfect-scrollbar class="d-flex flex-wrap gradient-panel">
+  <perfect-scrollbar class="d-flex flex-wrap wallpaper-panel">
     <v-img
       width="42"
       height="42"
       cover
       class="ma-1"
+      :class="currentPhoto?.id === wallpapper.id ? 'active-card' : ''"
       v-for="wallpapper in wallpapers"
       :key="wallpapper.id"
       :src="wallpapper.urls.thumb"
+      @click="changeBg(wallpapper)"
     ></v-img>
-
-    <!-- <v-card
-      width="42"
-      height="42"
-      class="ma-1"
-      v-for="wallpapper in wallpapers"
-      :key="wallpapper.id"
-      :style="`background: url(${wallpapper.urls.regular})}`"
-      @click="changeBg(wallpapper.urls.regular)"
-    >
-    </v-card> -->
   </perfect-scrollbar>
   <v-btn class="mt-3" color="gray" block>More Wallpapers</v-btn>
 </template>
 
 <style scoped lang="scss">
-.gradient-panel {
+.wallpaper-panel {
   max-height: 500px;
 }
 
