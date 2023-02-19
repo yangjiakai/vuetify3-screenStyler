@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { useCustomizeThemeStore } from "@/stores/customizeTheme";
-const customizeTheme = useCustomizeThemeStore();
+import { useStylerStore } from "@/stores/stylerStore";
+const stylerStore = useStylerStore();
+const back = computed(() => stylerStore.currentBackground);
 </script>
 
 <template>
@@ -13,7 +14,9 @@ const customizeTheme = useCustomizeThemeStore();
 
 <style scoped>
 #app {
-  background: url("https://w.wallhaven.cc/full/yx/wallhaven-yxxvox.png");
+  /* background: url("https://w.wallhaven.cc/full/yx/wallhaven-yxxvox.png"); */
+  background: v-bind(back);
   background-size: cover;
+  background-position: center center;
 }
 </style>

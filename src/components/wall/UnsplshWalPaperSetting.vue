@@ -21,7 +21,7 @@ onMounted(() => {
 
 const changeBg = (photo: Photo) => {
   currentPhoto.value = photo;
-  stylerStore.currentBackground = `url(${photo.urls.regular})`;
+  stylerStore.currentBackground = `url(${photo.urls.full})`;
 };
 
 const currentPhoto = ref<Photo>();
@@ -33,7 +33,7 @@ const currentPhoto = ref<Photo>();
       width="42"
       height="42"
       cover
-      class="ma-1"
+      class="ma-1 wallpaper-card"
       :class="currentPhoto?.id === wallpapper.id ? 'active-card' : ''"
       v-for="wallpapper in wallpapers"
       :key="wallpapper.id"
@@ -47,6 +47,11 @@ const currentPhoto = ref<Photo>();
 <style scoped lang="scss">
 .wallpaper-panel {
   max-height: 500px;
+}
+
+.wallpaper-card {
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .active-card {

@@ -4,7 +4,9 @@ export const useStylerStore = defineStore({
   id: "styler",
   state: () => ({
     currentPanel: ref("wall"),
-    currentBackground: ref(""),
+    currentBackground: ref(
+      `url("https://w.wallhaven.cc/full/yx/wallhaven-yxxvox.png"`
+    ),
     dock: reactive({
       isShow: true,
       size: 100,
@@ -13,7 +15,7 @@ export const useStylerStore = defineStore({
         r: 0,
         g: 0,
         b: 0,
-        a: 1,
+        a: 0.5,
       },
       position: "bottom",
     }),
@@ -22,7 +24,12 @@ export const useStylerStore = defineStore({
 
   persist: {
     enabled: true,
-    strategies: [{ storage: localStorage, paths: [] }],
+    strategies: [
+      {
+        storage: localStorage,
+        paths: ["currentPanel", "dock", "dockItems", "currentBackground"],
+      },
+    ],
   },
 
   getters: {},
