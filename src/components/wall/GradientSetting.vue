@@ -13,7 +13,7 @@ const changeBgColor = (gradient: any) => {
   stylerStore.currentBackground = `linear-gradient(${gradient.colors[0]}, ${gradient.colors[1]})`;
 };
 
-const currentGradient = ref({ name: "Blu", colors: ["#00416A", "#E4E5E6"] });
+const currentGradient = ref();
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const currentGradient = ref({ name: "Blu", colors: ["#00416A", "#E4E5E6"] });
       width="42"
       height="42"
       class="ma-1"
-      :class="currentGradient.name === gradient.name ? 'active-gradient' : ''"
+      :class="currentGradient?.name === gradient.name ? 'active-card' : ''"
       v-for="gradient in gradients"
       :key="gradient.name"
       :style="`background: linear-gradient(${gradient.colors[0]}, ${gradient.colors[1]}`"
@@ -30,7 +30,7 @@ const currentGradient = ref({ name: "Blu", colors: ["#00416A", "#E4E5E6"] });
     >
     </v-card>
   </perfect-scrollbar>
-  <GradientDetailCard :gradient="currentGradient" />
+  <GradientDetailCard v-if="currentGradient" :gradient="currentGradient" />
 </template>
 
 <style scoped lang="scss">
@@ -38,7 +38,7 @@ const currentGradient = ref({ name: "Blu", colors: ["#00416A", "#E4E5E6"] });
   height: 500px;
 }
 
-.active-gradient {
+.active-card {
   border: 2px solid #eee;
 }
 </style>

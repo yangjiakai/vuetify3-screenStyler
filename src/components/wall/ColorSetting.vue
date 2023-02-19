@@ -24,7 +24,10 @@ const solidColors = ref([
   "#571E48",
 ]);
 
+const currentColor = ref("");
+
 const changeColor = (color: string) => {
+  currentColor.value = color;
   stylerStore.currentBackground = color;
 };
 </script>
@@ -35,6 +38,7 @@ const changeColor = (color: string) => {
       width="42"
       height="42"
       class="ma-1"
+      :class="currentColor === color ? 'active-card' : ''"
       v-for="color in solidColors"
       :key="color"
       :color="color"
@@ -44,4 +48,8 @@ const changeColor = (color: string) => {
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.active-card {
+  border: 2px solid #eee;
+}
+</style>

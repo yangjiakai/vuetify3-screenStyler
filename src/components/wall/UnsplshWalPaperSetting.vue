@@ -48,6 +48,10 @@ const changeBg = (gradient: string) => {};
 
 <style scoped lang="scss">
 .gradient-panel {
-  // height: 500px;
+  max-height: 500px;
+}
+
+.active-card {
+  border: 2px solid #eee;
 }
 </style>
