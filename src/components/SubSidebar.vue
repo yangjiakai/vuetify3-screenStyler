@@ -12,11 +12,10 @@ import PanelOptions from "@/components/panels/PanelOptions.vue";
 import PanelIcons from "@/components/panels/PanelIcons.vue";
 import PanelWidgets from "@/components/panels/PanelWidgets.vue";
 import { useStylerStore } from "@/stores/stylerStore";
+import navData from "@/data/mainNav";
 const stylerStore = useStylerStore();
 const customizeTheme = useCustomizeThemeStore();
-
 const { t } = useLocale();
-
 const panel = ref([0, 1]);
 const active = ref(false);
 const contentRef = ref(null);
@@ -27,6 +26,10 @@ const togglePanel = () => {
 
 const icon = computed(() => {
   return active.value ? "mdi-chevron-up" : "mdi-chevron-down";
+});
+
+const currentPanelInfo = computed(() => {
+  return navData.find((item) => item.value === stylerStore.currentPanel);
 });
 </script>
 
@@ -47,8 +50,10 @@ const icon = computed(() => {
         color="transparent"
         class="text-center py-5"
       >
-        <h4 class="text-h4 mb-1 font-weight-thin">WALL</h4>
-        <p class="">Desktop background</p>
+        <h4 class="text-h4 mb-1 font-weight-thin">
+          {{ currentPanelInfo?.value }}
+        </h4>
+        <p class="">{{ currentPanelInfo?.subtitle }}</p>
       </v-card>
     </template>
     <!-- ---------------------------------------------- -->

@@ -5,40 +5,10 @@
 -->
 <script setup lang="ts">
 import { useStylerStore } from "@/stores/stylerStore";
+import { Icon } from "@iconify/vue";
+import navData from "@/data/mainNav";
 const stylerStore = useStylerStore();
-
-const mainNav = ref([
-  {
-    icon: "mdi-image-outline",
-    value: "wall",
-    text: "wall",
-    panel: "wall",
-  },
-  {
-    icon: "mdi-widgets",
-    value: "widgets",
-    text: "widgets",
-    panel: "widgets",
-  },
-  {
-    icon: "mdi-star-outline",
-    value: "icons",
-    text: "icons",
-    panel: "icons",
-  },
-  {
-    icon: "mdi-laptop",
-    value: "dock",
-    text: "dock",
-    panel: "dock",
-  },
-  {
-    icon: "mdi-cog-outline",
-    value: "options",
-    text: "options",
-    panel: "options",
-  },
-]);
+const mainNav = ref(navData);
 </script>
 
 <template>
@@ -48,16 +18,12 @@ const mainNav = ref([
     <!-- ---------------------------------------------- -->
     <template v-slot:prepend>
       <v-card color="#171717" height="200" variant="flat">
-        <v-list-item
-          class="mt-5"
-          prepend-icon="mdi-widgets"
-          value="widgets"
-          to="/"
-        >
+        <v-list-item class="mt-5" value="widgets" to="/">
+          <Icon width="26" icon="vscode-icons:file-type-c-al" />
           <v-tooltip
             activator="parent"
             location="right"
-            text="widgets"
+            text="Vuetify3-Styler"
             theme="light"
           ></v-tooltip>
         </v-list-item>
