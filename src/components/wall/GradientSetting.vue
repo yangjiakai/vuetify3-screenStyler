@@ -22,6 +22,7 @@ const currentGradient = ref({ name: "Blu", colors: ["#00416A", "#E4E5E6"] });
       width="42"
       height="42"
       class="ma-1"
+      :class="currentGradient.name === gradient.name ? 'active-gradient' : ''"
       v-for="gradient in gradients"
       :key="gradient.name"
       :style="`background: linear-gradient(${gradient.colors[0]}, ${gradient.colors[1]}`"
@@ -35,5 +36,9 @@ const currentGradient = ref({ name: "Blu", colors: ["#00416A", "#E4E5E6"] });
 <style scoped lang="scss">
 .gradient-panel {
   height: 500px;
+}
+
+.active-gradient {
+  border: 2px solid #eee;
 }
 </style>
