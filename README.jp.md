@@ -19,6 +19,11 @@
 
 このツールは Windows の Screen Styler を模倣して作られたものであり、ブラウザのコンテキストでの適用は不確かです。美的な目的のための超カスタマイズツールとして使用できます。
 
+## Preview
+
+<img  src='/src/assets/preview.png'  alt='Vuetify3' />
+<img  src='/src/assets/preview2.png'  alt='Vuetify3' />
+
 ## 特徴
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core)

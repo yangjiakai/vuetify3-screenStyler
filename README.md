@@ -19,6 +19,11 @@
 
 This tool is designed to mimic Window's Screen Styler, but its application in a browser context is uncertain. It can be used as a super customization tool for aesthetic purposes.
 
+## Preview
+
+<img  src='/src/assets/preview.png'  alt='Vuetify3' />
+<img  src='/src/assets/preview2.png'  alt='Vuetify3' />
+
 ## Features
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core)

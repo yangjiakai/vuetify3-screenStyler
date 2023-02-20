@@ -18,6 +18,11 @@
 
 模仿 Window 的 Screen Styler 制作的工具,用在浏览器上不知道有什么用,可以当做系统的超级美化自定义工具吧
 
+## Preview
+
+<img  src='/src/assets/preview.png'  alt='Vuetify3' />
+<img  src='/src/assets/preview2.png'  alt='Vuetify3' />
+
 ## 特性
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core)
