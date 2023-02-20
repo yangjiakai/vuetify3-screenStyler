@@ -1,5 +1,5 @@
-<p align='center' style="margin-top:160px">
-  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
+<p align='center'>
+  <img style="margin:50px 0" src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
 </p>
 
 <h6 align='center'>
