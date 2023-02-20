@@ -1,9 +1,9 @@
-<br><br><br>
+<br><br>
 
-<p align='center' style="padding:50px 0">
-  <img  src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
+<p align='center' >
+  <img  src='/src/assets/logo.svg' alt='Vuetify3' width='300'/>
 </p>
-<br><br><br>
+<br><br>
 
 <h6 align='center'>
 <a href="https://styler.vuetify3.com">Live Demo</a>

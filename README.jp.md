@@ -1,6 +1,9 @@
-<p align='center'>
-  <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200' />
+<br><br>
+
+<p align='center' >
+  <img  src='/src/assets/logo.svg' alt='Vuetify3' width='300'/>
 </p>
+<br><br>
 
 <h6 align='center'>
 <a href="https://styler.vuetify3.com">ライブ・デモ</a>
