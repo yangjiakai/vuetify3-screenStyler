@@ -1,4 +1,4 @@
-<p align='center' style="margin-top:80px">
+<p align='center' style="margin-top:160px">
   <img src='/src/assets/logo.svg' alt='Vitesse - Opinionated Vite Starter Template' width='200'/>
 </p>
 
