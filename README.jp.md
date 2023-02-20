@@ -3,7 +3,7 @@
 </p>
 
 <h6 align='center'>
-<a href="https://cool-daifuku-5ec982.netlify.app/">ライブ・デモ</a>
+<a href="https://styler.vuetify3.com">ライブ・デモ</a>
 </h6>
 
 <br>
