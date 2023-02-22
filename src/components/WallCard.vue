@@ -20,8 +20,6 @@ const back = computed(() => stylerStore.currentBackground);
   transform: translateX(-50%);
   top: 50%;
   transform: translateY(-50%);
-  // background: #ccc;
-  // background: linear-gradient(135deg, #fce38a, #f38181);
   background: v-bind(back);
   background-size: cover;
   background-position: center center;
