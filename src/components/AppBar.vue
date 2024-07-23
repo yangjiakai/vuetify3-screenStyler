@@ -10,7 +10,7 @@ const customizeTheme = useCustomizeThemeStore();
 </script>
 
 <template>
-  <v-app-bar elevation="1" location="top">
+  <v-app-bar elevation="1" location="top" color="rgba(40,40,40,.8)">
     <template v-slot:prepend>
       <transition>
         <v-icon

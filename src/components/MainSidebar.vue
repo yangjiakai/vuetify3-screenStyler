@@ -12,12 +12,12 @@ const mainNav = ref(navData);
 </script>
 
 <template>
-  <v-navigation-drawer color="#171717" rail>
+  <v-navigation-drawer color="#1e1f22" rail>
     <!-- ---------------------------------------------- -->
     <!---Top Area -->
     <!-- ---------------------------------------------- -->
     <template v-slot:prepend>
-      <v-card color="#171717" height="200" variant="flat">
+      <v-card color="#1e1f22" height="200" variant="flat">
         <v-list-item class="mt-5" value="widgets" to="/">
           <Icon width="26" icon="vscode-icons:file-type-c-al" />
           <v-tooltip

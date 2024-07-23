@@ -44,12 +44,7 @@ const currentPanelInfo = computed(() => {
     <!---Top Area -->
     <!-- ---------------------------------------------- -->
     <template v-slot:prepend>
-      <v-card
-        height="100"
-        variant="flat"
-        color="transparent"
-        class="text-center py-5"
-      >
+      <v-card height="100" variant="flat" class="text-center py-5">
         <h4 class="text-h4 mb-1 font-weight-thin">
           {{ currentPanelInfo?.value }}
         </h4>
@@ -60,7 +55,7 @@ const currentPanelInfo = computed(() => {
     <!---Nav List -->
     <!-- ---------------------------------------------- -->
     <div>
-      <perfect-scrollbar class="scrollnav px-5">
+      <perfect-scrollbar class="scrollnav px-2">
         <!-- ---------------------------------------------- -->
         <!---Wall Panel -->
         <!-- ---------------------------------------------- -->
