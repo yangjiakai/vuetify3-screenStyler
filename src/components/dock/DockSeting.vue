@@ -33,7 +33,7 @@ const positionList = ref([
     <!---Separator -->
     <!-- ---------------------------------------------- -->
     <v-btn
-      color="grey"
+      color="primary"
       class="my-5"
       block
       @click="stylerStore.dockItems.push('divider')"
